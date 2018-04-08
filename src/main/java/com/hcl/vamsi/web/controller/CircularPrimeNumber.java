@@ -25,8 +25,8 @@ public class CircularPrimeNumber {
 	public CircularPrimeNo isCircularPrimeNumber(@RequestParam("number") int number){		
 		int tempnumber = number;int circularprimenumber = number;
 		int intlength = Integer.toString(circularprimenumber).length();
-		//boolean isCircularPrime=true; 
-
+		//boolean isCircularPrime=true;
+		cp.setIsCircularPrime("true");
 		do{			
 			if (isPrimeNumber(circularprimenumber)){
 				System.out.println(circularprimenumber + " is Prime Number");
@@ -38,8 +38,7 @@ public class CircularPrimeNumber {
 				//isCircularPrime=false;
 				cp.setIsCircularPrime("false");
 				break;
-			}			
-				
+			}				
 		}while((tempnumber=tempnumber/10)>0);
 		if (Boolean.getBoolean(cp.getIsCircularPrime())){
 			System.out.println(number + " entered is Circular Prime Number");
