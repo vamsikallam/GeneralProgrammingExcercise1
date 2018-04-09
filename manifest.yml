@@ -1,8 +1,9 @@
 ---
 applications:
- - name: GeneralProgrammingExcercise1
-   random-route: true
-   path: target/GeneralProgrammingExcercise1-1.0-SNAPSHOT.war
-   memory: 256M
-   instances: 1
-   buildpack: java_buildpack
+- name: GeneralProgrammingExcercise1
+  host: generalprogex
+  path: target/GeneralProgrammingExcercise1.war
+  memory: 256M
+  instances: 1
+  buildpack: java_buildpack
+  domain: eu-gb.mybluemix.net
