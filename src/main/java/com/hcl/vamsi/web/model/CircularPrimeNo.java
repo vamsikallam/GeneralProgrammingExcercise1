@@ -7,7 +7,7 @@ package com.hcl.vamsi.web.model;
 
 public class CircularPrimeNo {
 	private String isCircularPrime;
-	CircularPrimeNo(String isCircularPrime) {
+	public CircularPrimeNo(String isCircularPrime) {
 		this.isCircularPrime = isCircularPrime;
 	}
 	public void setIsCircularPrime(String isCircularPrime){
