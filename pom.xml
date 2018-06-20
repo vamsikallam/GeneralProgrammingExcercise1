@@ -4,7 +4,7 @@
 	<groupId>com.hcl.vamsi.GeneralProgrammingExcercise1</groupId>
 	<artifactId>GeneralProgrammingExcercise1</artifactId>
 	<version>1.0-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<build>
 		<sourceDirectory>src</sourceDirectory>
 		<plugins>
