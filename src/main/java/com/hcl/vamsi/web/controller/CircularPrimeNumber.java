@@ -7,9 +7,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.hcl.vamsi.web.model.CircularPrimeNo;
-import org.springframework.beans.factory.annotation.Autowired;
-
-
 
 @Controller
 public class CircularPrimeNumber {
@@ -18,15 +15,13 @@ public class CircularPrimeNumber {
 	 * circular prime number method, which will circulate number and then check if it prime or not
 	 * 
 	 */	
-	@Autowired
-	CircularPrimeNo cp;
 	@RequestMapping("/isCircularPrime")
 	@ResponseBody	
 	public CircularPrimeNo isCircularPrimeNumber(@RequestParam("number") int number){		
 		int tempnumber = number;int circularprimenumber = number;
 		int intlength = Integer.toString(circularprimenumber).length();
-		//boolean isCircularPrime=true; 
-
+		//boolean isCircularPrime=true;
+		CircularPrimeNo cp = new CircularPrimeNo("true");
 		do{			
 			if (isPrimeNumber(circularprimenumber)){
 				System.out.println(circularprimenumber + " is Prime Number");
@@ -38,8 +33,7 @@ public class CircularPrimeNumber {
 				//isCircularPrime=false;
 				cp.setIsCircularPrime("false");
 				break;
-			}			
-				
+			}				
 		}while((tempnumber=tempnumber/10)>0);
 		if (Boolean.getBoolean(cp.getIsCircularPrime())){
 			System.out.println(number + " entered is Circular Prime Number");
